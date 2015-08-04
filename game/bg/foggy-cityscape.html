@@ -1,0 +1,12 @@
+<div class="back-layer stretch-fit"></div>
+<div class="glow-layer stretch-fit"></div>
+
+<style pd-style>
+  {{style.$}} .back-layer {
+    background: url({{background}}/back-layer.jpg) {{-app.mouse.x.f * 10}}px {{-app.mouse.yc.f * 10}}px;
+  }
+
+  {{style.$}} .glow-layer {
+    background: url({{background}}/glow-layer.png) {{-app.mouse.x.f * 20}}px {{-app.mouse.yc.f * 20}}px;
+  }
+</style>

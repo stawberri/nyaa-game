@@ -1,0 +1,25 @@
+.app-status-text {
+  position: absolute;
+  width: 1280px; height: 139px;
+  overflow: hidden;
+}
+
+.app-status-text pd-d {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.app-status-text p {
+  margin: 6px 250px;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.app-status-text a {
+  display: inline-block;
+  text-shadow: inherit;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}

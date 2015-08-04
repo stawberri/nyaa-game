@@ -1,0 +1,9 @@
+<ng-include src="route.$.$ + '/0/i.0.html'"></ng-include>
+
+<pd-d ng-click="view.clicks = view.clicks + 1"><p>
+  Every child has a childhood dream&mdash;some wish they wanted to see fulfilled.
+  <span ng-if="view.clicks">Mine was a simple one, but it still hasn't come true yet.</span>
+  <em class="align-right" style="margin-right: 125px;" ng-if="view.clicks >= 2">I wanted a cat.</em>
+  <pd-redirect ng-if="view.clicks >= 3">/0/1</pd-redirect>
+</p></pd-d>
+

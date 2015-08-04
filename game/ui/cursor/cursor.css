@@ -1,0 +1,14 @@
+/* This serves as a reset and ensures that nothing has a computed style of auto */
+* {
+  cursor: inherit;
+}
+
+html {
+  cursor: default;
+}
+
+.app-status-text.current a,
+.app-status-text.current [ng-click],
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="engine/css/view-standard.css">
+
+<!-- This div holds the background -->
+<div id="view-background">
+  <div class="background" ng-repeat="background in session.backgrounds" ng-include="background + '.html'"></div>
+</div>
+
+<!-- This div holds ui that is behind the character. -->
+<div id="view-ui-behind" class="ui-hide-fade"><div><div>
+  <div class="menu-left">
+    <div ng-include="session.menuBehind.left"></div>
+  </div>
+  <div class="menu-right">
+    <div ng-include="session.menuBehind.right"></div>
+  </div>
+</div></div></div>
+
+<div id="view-character"><div>
+  <div class="character">
+    <!-- This is a character element -->
+  </div>
+</div></div>
+
+<!-- This div holds the background -->
+<div id="view-foreground">
+  <div class="foreground" ng-repeat="foreground in session.foregrounds" ng-include="foreground + '.html'"></div>
+</div>
+
+<style>
+  #view-ui-behind {
+    perspective-origin: {{app.mouse.x.fc * 25 + 50}}% {{app.mouse.y.fc * 25 + 50}}%;
+  }
+
+  #view-ui-behind>div {
+    top: {{-app.mouse.yc.fc * 45}}px; left: {{-app.mouse.x.fc * 45}}px;
+    transform: rotateY({{app.mouse.x.fc * 30}}deg) ;
+  }
+
+  #view-character {
+    top: {{-app.mouse.yc.fc * 120}}px; left: {{-app.mouse.x.fc * 120}}px;
+  }
+
+  /* Syntax Highlighting Fix */
+</style>
+<style ng-if="app.$">
+#view-ui-behind>div>div>.left {
+  outline: 5px dashed #f400a1;
+}
+
+#view-ui-behind>div>div>.right {
+  outline: 5px dashed #81d8d0;
+}
+</style>

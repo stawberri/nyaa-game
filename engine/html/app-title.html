@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="engine/css/app-title.css">
+<style>
+  #app-title>a:hover+h1 {
+    color: {{app.titlebarColor(.9)}};
+  }
+
+  #app-title h1 {
+    color: {{app.titlebarColor(.3)}};
+    text-shadow: 0 0 20px {{app.titlebarColor(.5)}}, 0 0 20px {{app.titlebarColor(.5)}};
+  }
+
+  #app-title h1::after {
+    content: '{{app.tilde}}';
+  }
+</style>
+
+<div class="app-meta-loading-fader"></div>
+<span></span>
+<a href="~"></a>
+<h1>{{app.name}}</h1>
+<h2>{{app.title}}</h2>

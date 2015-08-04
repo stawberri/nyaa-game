@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="engine/css/app-status.css">
+
+<style pd-style>
+  .app-status-text {
+    text-shadow:
+      0 0 5px {{app.titlebarBackground()}},
+      0 0 5px {{app.titlebarBackground()}},
+      0 0 5px {{app.titlebarBackground()}},
+      0 0 5px {{app.titlebarBackground()}},
+      -1px -1px {{app.titlebarBackground()}},
+      -1px 1px {{app.titlebarBackground()}},
+      1px 1px {{app.titlebarBackground()}},
+      1px -1px {{app.titlebarBackground()}};
+
+    transition: {{app.titlebarTransition('text-shadow')}};
+  }
+
+  .app-status-text.current pd-d[ng-click]:hover {
+    background-position: {{app.mouse.x.x - 640}}px {{app.mouse.y.y - 139}}px;
+  }
+
+  /**/
+</style>
+
+<div class="app-meta-loading-fader"></div>
+<div class="app-status-text current"
+  pd-transclude="view.$.transclude"
+  pd-session-dialogue-render
+></div>

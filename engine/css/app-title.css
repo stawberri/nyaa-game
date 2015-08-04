@@ -1,0 +1,52 @@
+/* Drag-able-ifier */
+#app-title>span {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 80px; height: 100%;
+  -webkit-app-region: no-drag;
+}
+
+/* Header link */
+#app-title>a {
+  z-index: 1;
+  position: absolute;
+  top: 10px; left: 10px;
+  width: 60px; height: 32px;
+}
+
+#app-title>a:hover+h1 {
+  text-shadow: none;
+  transition: color .3s, text-shadow .3s;
+}
+
+/* Nyaa~ */
+#app-title h1 {
+  font-family: 'Annie Use Your Telescope', 'Century Gothic', cursive, sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  margin: 0;
+  position: absolute;
+  top: -23px; left: -7px;
+  transform: rotate(-20deg);
+  transition: opacity .5s, text-shadow .5s;
+}
+
+/* the ~ */
+#app-title h1::after {
+  position: relative;
+  top: .4em;
+  font-size: 2em;
+  line-height: 0;
+}
+
+/* Window title */
+#app-title h2 {
+  position: absolute;
+  top: -2px; left: 80px;
+  margin: 0;
+  font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+  white-space: nowrap;
+}

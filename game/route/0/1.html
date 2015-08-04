@@ -1,0 +1,14 @@
+<ng-include src="route.$.$ + '/0/i.0.html'"></ng-include>
+<pd-data pd-key="stage">1</pd-data>
+
+<pd-d ng-click="view.clicks = view.clicks + 1"><p>
+  Now that I'm living on my own, I thought that my chance to have a cat had finally
+  arrived<span ng-if="!view.clicks">.</span><span ng-if="view.clicks">&mdash;but
+  my neighborhood pet store never had any cats.</span>
+  <span ng-if="view.clicks >= 2">My pitiful life,</span>
+  <span ng-if="view.clicks >= 3">devoid of any cats,</span>
+  <span ng-if="view.clicks >= 4">changes</span>
+  <span ng-if="view.clicks >= 5"><em>today</em>.</span>
+  <pd-redirect ng-if="view.clicks >= 6">0/2</pd-redirect>
+</p></pd-d>
+

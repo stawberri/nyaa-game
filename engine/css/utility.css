@@ -1,0 +1,28 @@
+/* ui hiding */
+.ui-hide-fade {
+  transition: opacity .69s;
+}
+
+.app-ui-hide .ui-hide-fade {
+  opacity: 0;
+}
+
+.app-ui-hide>* {
+  pointer-events: none;
+}
+
+/* Display: none */
+.display-none {
+  display: none;
+}
+
+/* Stretch element to fit its parent (assuming it's positioned) */
+.stretch-fit {
+  position: absolute;
+  width: 100%; height: 100%;
+}
+
+/* Generic element styles */
+p {
+  margin: .5em 0;
+}

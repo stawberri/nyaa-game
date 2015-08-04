@@ -1,0 +1,29 @@
+pd-tooltip {
+  display: none;
+}
+
+#app-tooltip {
+  position: absolute;
+  height: 100%; width: 100%;
+  overflow: visible;
+  perspective: 500px;
+  pointer-events: none;
+}
+
+#tooltip-mouse {
+  position: absolute;
+  width: 300px;
+  padding: 10px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#tooltip-mouse h1 {
+  font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-weight: 100;
+  white-space: nowrap;
+  margin: -10px -5px 9px;
+  height: 1.3rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+}

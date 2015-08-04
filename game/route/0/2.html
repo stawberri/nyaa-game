@@ -1,0 +1,12 @@
+<ng-include src="route.$.$ + '/0/i.0.html'"></ng-include>
+<pd-data pd-key="stage">2</pd-data>
+
+<pd-d ng-click="view.clicks = view.clicks + 1"><p>
+  A new store is opening nearby.
+  <span ng-if="view.clicks">
+    I've been talking to the owners online, and they assured me
+    they would have <em>exactly</em> what I need:
+  </span>
+  <span ng-if="view.clicks >= 2" class="display-block">A cat just for me.</span>
+</p></pd-d>
+

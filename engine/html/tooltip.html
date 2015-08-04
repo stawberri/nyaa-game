@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="engine/css/tooltip.css">
+
+<style pd-style>
+  #tooltip-mouse {
+    border: 1px {{app.titlebarBackground()}} solid;
+    background: {{app.titlebarBackground(.9)}};
+    color: {{app.titlebarColor()}};
+    {{tooltip.mouseTipCss('tooltip-mouse')}};
+
+    transition: {{app.titlebarTransition('border-color', 'background', 'color')}};
+  }
+</style>
+
+<div
+  id="tooltip-mouse"
+  ng-show="tooltip.mouse.$"
+  class="{{tooltip.mouse.clas}}"
+  pd-transclude="tooltip.mouse.transclude"></div>

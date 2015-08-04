@@ -1,0 +1,32 @@
+<style>
+  #app-meta-buttons a#app-meta-debug {
+    width: 63px;
+    border-right: none !important;
+    transition: color .25s, background .25s;
+  }
+
+  #app-meta-buttons a#app-meta-parallax {
+    width: 63px;
+    border-right: none !important;
+    transition: color .25s, background .25s;
+  }
+</style>
+<style ng-if="app.$">
+  #app-meta-buttons a#app-meta-debug {
+    color: rgba(253, 238, 0, .9);
+    background: rgba(61, 43, 31, .9);
+  }
+</style>
+<style ng-if="!app.parallaxOff">
+  #app-meta-buttons a#app-meta-parallax {
+    color: rgba(253, 238, 0, .9);
+    background: rgba(61, 43, 31, .9);
+  }
+</style>
+
+<a id="app-meta-debug" href="" ng-click="app.$ = app.$ ? (app.parallaxOff = false) : true">
+  debug {{app.$ ? 'on' : 'off'}}
+</a>
+<a id="app-meta-parallax" href="" ng-if="app.$" ng-click="app.parallaxOff = !app.parallaxOff">
+  parallax {{app.parallaxOff ? 'off' : 'on'}}
+</a>

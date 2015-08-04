@@ -1,0 +1,61 @@
+.app-status-text pd-d[ng-click] {
+  transition: background-color .7s ease-out;
+}
+
+.app-status-text pd-d[ng-click]:hover {
+  transition: background-color .3s ease-out;
+  background: rgba(255, 255, 255, .1) url(clickable-mouseover.png) no-repeat fixed;
+}
+
+.app-status-text pd-d[ng-click]:active {
+  transition: none;
+  background: none;
+}
+
+.app-status-text a {
+  transition: text-shadow .7s;
+}
+
+.app-status-text.current:hover a {
+  text-shadow:
+    0 0 25px #f400a1,
+    -1px -1px #f400a1,
+    -1px 1px #f400a1,
+    1px 1px #f400a1,
+    1px -1px #f400a1;
+  transition: text-shadow .5s;
+}
+
+.app-status-text.current a:hover {
+  text-shadow:
+    1px 1px 5px #81d8d0,
+    -1px -1px #81d8d0,
+    -1px 1px #81d8d0,
+    1px 1px #81d8d0,
+    1px -1px #81d8d0;
+  transition: text-shadow .3s;
+}
+
+/* Some generic classes to apply to stuff */
+
+.app-status-text .blinking {
+  -webkit-animation: blinking-animation .69s infinite alternate;
+}
+
+@-webkit-keyframes blinking-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.app-status-text .align-right {
+  display: block;
+  text-align: right;
+}
+
+.app-status-text .display-block {
+  display: block;
+}

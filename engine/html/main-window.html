@@ -1,0 +1,93 @@
+<!-- App-wide CSS includes -->
+<link rel="stylesheet" href="engine/css/meta-loading.css">
+<link rel="stylesheet" href="engine/css/main-window.css">
+<link rel="stylesheet" href="engine/css/angular-csp.css">
+<link rel="stylesheet" href="engine/css/fonts.css">
+<link rel="stylesheet" href="engine/css/utility.css">
+
+<!-- Game css files -->
+<ng-include src="'game/ui/css.html'"></ng-include>
+
+<!-- Dynamic styles used by this file -->
+<style>
+  body {
+    background: {{app.titlebarBackground()}};
+
+    transition: {{app.titlebarTransition('background-color')}};
+  }
+
+  #app-meta-loading {
+    background: {{app.titlebarColor()}};
+  }
+
+  #app-meta-loading.done {
+    background: {{app.titlebarColor(0)}};
+  }
+
+  #app-meta-loading .st0 {
+    fill: {{app.titlebarBackground()}};
+
+    transition: {{app.titlebarTransition('fill')}};
+  }
+
+  #app-title,
+  #app-status {
+    background: {{app.titlebarBackground(.69)}};
+    color: {{app.titlebarColor()}};
+  }
+
+  #app-title {
+    border-bottom: 1px solid {{app.titlebarBackground()}};
+
+    transition: top 0s .69s, {{app.titlebarTransition('background-color', 'color', 'border-bottom-color')}};
+  }
+
+  .done+div #app-title {
+    transition: top 1.1s, {{app.titlebarTransition('background-color', 'color', 'border-bottom-color')}};
+  }
+
+  #app-status {
+    border-top: 1px solid {{app.titlebarBackground()}};
+
+    transition: bottom 0s .69s, {{app.titlebarTransition('background-color', 'color', 'border-top-color')}};
+  }
+
+  .done+div #app-status {
+    transition: bottom 1.1s, {{app.titlebarTransition('background-color', 'color', 'border-top-color')}};
+  }
+
+  div.app-meta-loading-fader {
+    background: {{app.titlebarBackground()}};
+    transition: opacity 0s .69s, {{app.titlebarTransition('background-color')}};
+  }
+
+  .done+div div.app-meta-loading-fader {
+    transition: opacity 1s 1.1s, {{app.titlebarTransition('background-color')}};
+  }
+</style>
+
+<!-- This invisible element is for loading route data. -->
+<ng-view style="display: none;"></ng-view>
+
+<!-- Main view for app -->
+<main id="app-window"
+  ng-include="'engine/html/view-standard.html'"
+></main>
+
+<!-- For UI hiding purposes. -->
+<span class="ui-hide-fade">
+  <!-- Main titlebar -->
+  <header id="app-title" ng-include="'engine/html/app-title.html'"></header>
+
+  <!-- Status bar -->
+  <footer id="app-status" ng-include="'engine/html/app-status.html'"></footer>
+</span>
+
+<!-- Tooltip displayer -->
+<aside
+  id="app-tooltip"
+  class="ui-hide-fade"
+  ng-include="'engine/html/tooltip.html'"
+  ng-controller="tooltip as tooltip"
+  ng-cloak
+></aside>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Nyaa~",
+  "short_name": "~",
+  "description": "A Catgirl Simulator",
+  "version": "0.2.2.6",
+  "icons": {
+    "16": "game/ui/icon/app.16.png", "128": "game/ui/icon/app.128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["engine/js/engine-background.js"]
+    }
+  },
+  "permissions": [
+    "storage"
+  ]
+}

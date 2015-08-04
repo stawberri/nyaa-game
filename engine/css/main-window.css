@@ -1,0 +1,46 @@
+/* Div that contains everything. Used for full-window effects. */
+#app-everything {
+  position: relative;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+/* Title bar and status bar shared styles */
+#app-title,
+#app-status {
+  position: fixed;
+  width: 100%;
+  left: 0;
+}
+
+/* Title bar */
+#app-title {
+  /* top is adjusted in meta-loading.css */
+  overflow: hidden;
+  height: 39px;
+  -webkit-app-region: drag;
+}
+
+.app-ui-hide #app-title {
+  top: -40px !important;
+  transition: top .69s !important;
+}
+
+/* Main view area */
+#app-window {
+  position: absolute;
+  overflow: hidden;
+  top: 0; left: 0;
+  width: 1280px; height: 720px;
+}
+
+/* Status bar */
+#app-status {
+  /* bottom is adjusted in meta-loading.css */
+  height: 139px;
+}
+
+.app-ui-hide #app-status {
+  bottom: -140px !important;
+  transition: bottom .69s !important;
+}
